@@ -102,11 +102,17 @@ routes. First, install the annotations package:
 Then, in ``config/routes.yaml``, remove the route you just created and uncomment
 the annotation route import at the bottom:
 
-.. code-block:: yaml
+.. code-block:: diff
 
-    controllers:
-        resource: ../src/Controller/
-        type: annotation
+    # config/routes.yaml
+    # ...
+
+    - #controllers:
+    - #    resource: ../src/Controller/
+    - #    type: annotation
+    + controllers:
+    +     resource: ../src/Controller/
+    +     type: annotation
 
 After this one-time setup, you can now add your route directly *above* the controller:
 
